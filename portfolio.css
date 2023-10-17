@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 html{
     font-size: 10px;
@@ -43,6 +44,69 @@ p{
 .title-section span{
     color: crimson;
 }
+
+/* Nav Section */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    background: #29322c;
+    padding-bottom: 10px;
+}
+.logo{
+    color: white;
+    font-size: 28px;
+    font-family: cursive;
+}
+span{
+    color: crimson;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+nav ul li a:hover{
+    color: crimson;
+    cursor: pointer;
+    transition: .3s;
+}
+button{
+    border: none;
+    background-color: transparent;
+    color: crimson;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: 2px solid crimson;
+    font-weight: 500;
+    font-size: 15px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: crimson;
+    transition: .3s;
+    color: white;
+    transform: scale(1.2);
+}
+@media only screen and (max-width: 600px;){
+    .nav{
+        flex-direction: column;
+    }
+}
+/* End Nav Section */
 
 /* Hero Section */
 #hero{
@@ -185,46 +249,6 @@ p{
 /* End Project Section */
 
 /* About Section */
-/* #about .about{
-    flex-direction: column-reverse;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 20px;
-}
-#about .col-left{
-    width: 250px;
-    height: 360px;
-    border-radius: 300px;
-}
-#about .col-right{
-    width: 100%;
-}
-#about .col-right h2{
-    font-size: 1.8rem;
-    font-weight: 500;
-    letter-spacing: .2rem;
-    margin-bottom: 10px;
-}
-#about .col-right p{
-    margin-bottom: 20px;
-}
-#about .col-left .about-img{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    border: 10px solid white;
-}
-#about .col-left .about-img::after{
-    content: ;
-    position: absolute;
-    left: -33px;
-    top: 19px;
-    height: 98%;
-    width: 98%;
-    border: 7px solid crimson;
-    z-index: -1;
-} */
 .about-container{
         display: flex;
         justify-content: center;
@@ -250,20 +274,130 @@ p{
 }
 
 .col-left .about-img img{
+    /* width: 100%; */
     display: grid;
     place-items: center;
+    align-items: center;
     justify-content: center;
     height: auto;
     border-radius: 10px;
     width: 300px;
 }
-@media only screen and (max-width: 600px;){
+
+@media only screen and (max-width: 600px){
     .container{
         flex-direction: column;
     }
 }
 /* End About Section */
 
+/* Contact Section */
+#contact .contact{
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#contact{
+    width: 100%;
+  
+}
+#contact .contact-items{
+    padding: 70px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 500px){
+    #contact .contact-items{
+        flex-direction: column;
+        padding: 50px 15px;
+    }
+    #contact .contact-item{
+        width: 200px;
+    }
+}
+#contact .contact-item{
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 gray;
+    transition: 1.3rem;
+}
+#contact .contact-item:hover{
+    box-shadow: 0px 0px 5px 0 gray;
+}
+#contact .icons{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#contact .contact-info h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    
+}
+#contact .contact-info h2{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+.containerr{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* End Contact Section */
+
+/* Footer Section */
+#footer{
+    background-image: linear-gradient(60deg, #29322c 0%, #485563 100%);
+}
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+.head h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: .1rem
+    ;
+}
+#footer h2{
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer #social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+#footer .social-items{
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+#footer p{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+}
+/* End Footer Section */
 
 /* Keyframe */
 @keyframes text_reveal_box{
@@ -288,18 +422,3 @@ p{
     }
 }
 /* End Keyframe */
-
-
-
-.title-section{
-    font-size: 4rem;
-    font-weight: 300;
-    color: black;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    text-align: center;
-}
-.title-section span{
-    color: crimson;
-}
